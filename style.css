@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  /* ### Accent */
+  --blue: hsl(248, 32%, 49%);
+  /* ### Neutral */
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: hsl(0, 100%, 74%);
+  background-color: var(--red);
   background-image: url(./images/bg-intro-desktop.png);
   font-family: 'Poppins', sans-serif;
   color: #fff;
@@ -17,7 +28,7 @@ body {
   justify-content: center;
   flex-direction: column;
   max-width: 1200px;
-  min-height: 100vh;
+  min-height: 90vh;
   margin: 0 auto;
 }
 
@@ -52,7 +63,7 @@ p {
 }
 
 .box-blue {
-  background-color: hsl(248, 32%, 49%);
+  background-color: var(--blue);
   padding: 1.25em 3.75em;
   margin-top: 1em;
 }
@@ -62,8 +73,12 @@ p {
   margin-bottom: 1.6em;
 }
 
+.form-control.error {
+  margin-bottom: 2.2em;
+}
+
 .form-control small {
-  color: hsl(0, 100%, 74%);
+  color: var(--red);
   font-weight: 600;
   position: absolute;
   bottom: -24px;
@@ -80,20 +95,22 @@ input {
   font-size: 0.875rem;
   padding: 1em 1.5em;
   border-radius: 5px;
-  border: 1px solid hsl(246, 25%, 77%);
+  border: 1px solid var(--grayish-blue);
 }
 
 .form-control.error input {
-  border-color: hsl(0, 100%, 74%);
-  color: hsl(0, 100%, 74%);
+  border-color: var(--red);
+  color: var(--red);
 }
 
 .form-control.error input::placeholder {
-  color: hsl(0, 100%, 74%);
+  color: var(--red);
 }
-
+/* input::placeholder {
+  color: var(--dark-blue);
+} */
 input:focus {
-  border: 1.3px solid hsl(248, 32%, 49%);
+  border: 1px solid var(--blue);
   outline: none;
 }
 
@@ -110,7 +127,7 @@ input:focus {
 }
 
 button {
-  background-color: hsl(154, 59%, 51%);
+  background-color: var(--green);
   color: #fff;
   display: block;
   width: 100%;
@@ -122,7 +139,7 @@ button {
   letter-spacing: 1px;
   border-radius: 5px;
   border: hsl(154, 59%, 45%);
-  box-shadow: 0 2px hsl(154, 59%, 45%);
+  box-shadow: 0 4px hsl(154, 59%, 45%);
   text-transform: uppercase;
 }
 
@@ -153,14 +170,16 @@ small {
 }
 
 small a {
-  color: hsl(0, 100%, 74%);
+  color: var(--red);
   text-decoration: none;
   font-weight: 600;
 }
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 3em;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -181,5 +200,8 @@ small a {
   }
   p {
     text-align: left;
+  }
+  .attribution {
+    margin-top: 5em;
   }
 }
