@@ -106,9 +106,7 @@ input {
 .form-control.error input::placeholder {
   color: var(--red);
 }
-/* input::placeholder {
-  color: var(--dark-blue);
-} */
+
 input:focus {
   border: 1px solid var(--blue);
   outline: none;
